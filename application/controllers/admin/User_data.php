@@ -13,7 +13,7 @@ class User_data extends REST_Controller {
 			$get_data = $this->db->query($q)->result();
 			if($get_data==NULL){
 				// $this->response(array('status' => 'Result not found', 502));
-			    echo 'no_data';
+				echo 'no_data';
 			}else{
 				$this->response($get_data, 200);
 			}

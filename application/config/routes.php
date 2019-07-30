@@ -60,29 +60,47 @@ $route['auth/username_check'] = 'auth/Username_check';
 /* Admin */
 $route['admin/user_data'] = 'admin/User_data';
 $route['admin/outlet'] = 'admin/Outlet';
+$route['admin/delete_outlet'] = 'admin/Delete_outlet';
 $route['admin/region'] = 'admin/Region';
+$route['admin/delete_region'] = 'admin/Delete_region';
 $route['admin/shift'] = 'admin/Shift';
+$route['admin/delete_shift'] = 'admin/Delete_shift';
 $route['admin/project'] = 'admin/Project';
+$route['admin/delete_project'] = 'admin/Delete_project';
 $route['admin/project_region'] = 'admin/Project_region';
+$route['admin/user_location'] = 'admin/User_location';
 
 /* Team Leader */
 $route['team_leader/absent'] = 'team_leader/Check_in';
 $route['team_leader/absent_done'] = 'team_leader/Absent_done';
 $route['team_leader/report'] = 'team_leader/Report';
 $route['team_leader/absent_check'] = 'team_leader/Absent_check';
+$route['team_leader/report_competitor'] = 'team_leader/Report_competitor';
+$route['team_leader/delete_report_competitor'] = 'team_leader/Delete_report_competitor';
 
 /* PIC */
 $route['pic/project'] = 'pic/Project';
 $route['pic/project_region'] = 'pic/Project_region';
+$route['pic/delete_project_region'] = 'pic/Delete_project_region';
 $route['pic/outlet'] = 'pic/Outlet';
 $route['pic/outlet2'] = 'pic/Outlet2';
 $route['pic/team_leader'] = 'pic/Team_leader';
 $route['pic/fl_to_outlet'] = 'pic/Fl_to_outlet';
+$route['pic/pic/delete_fl_to_outlet'] = 'pic/pic/Delete_fl_to_outlet';
+$route['pic/penjualan'] = 'pic/Selling';
+$route['pic/penjualan_hari_ini'] = 'pic/Selling_today';
+$route['pic/penjualan_bulan_ini'] = 'pic/Selling_this_month';
+$route['pic/project_region_to_outlet'] = 'pic/Project_region_to_outlet';
 
 /* Front Liner */
 $route['front_liner/absent'] = 'front_liner/Check_in';
 $route['front_liner/absent_done'] = 'front_liner/Absent_done';
 $route['front_liner/report'] = 'front_liner/Report';
+$route['front_liner/delete_report'] = 'front_liner/Delete_report';
+
+$route['front_liner/report_competitor'] = 'front_liner/Report_competitor';
+$route['front_liner/delete_report_competitor'] = 'front_liner/Delete_report_competitor';
+$route['front_liner/location'] = 'front_liner/Location';
 
 /* Non Front Liner */
 $route['non_front_liner/absent'] = 'non_front_liner/Check_in';

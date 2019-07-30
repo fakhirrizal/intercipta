@@ -21,7 +21,8 @@ class Team_leader extends REST_Controller {
 			}
 		}
 		if($data==NULL){
-			echo 'no_data';
+			$r = array();
+			$this->response($r, 200);
 		}else{
 			$this->response($data, 200);
 		}
