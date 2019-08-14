@@ -34,7 +34,7 @@ class Check_in extends REST_Controller {
 		//upload absent photo to server
         $file_name = $this->post('nama').$sekarang.".jpg";
         $upload_folder_path = "app/foto-absen";
-        $actual_path = "/home/u793339166/public_html/api-intercipta/".$upload_folder_path."/".$file_name;
+        $actual_path = "/home/opit5917/public_html/api-intercipta.aplikasiku.online/".$upload_folder_path."/".$file_name;
         $image = $this->post('image');
 		if($image==NULL){
 			$this->response(array('status' => 'File not found to be upload', 502));
@@ -49,7 +49,7 @@ class Check_in extends REST_Controller {
 				        echo 'Shift tidak ditemukan';
 				    }else{
 				        $jam_masuk_shift = '';
-				        foreach($jam_masuk_shift as $key => $jms){
+				        foreach($cek_shift as $key => $jms){
 				            $jam_masuk_shift = $jms->jam_masuk;
 				        }
 				        $awal  = strtotime($jam_masuk);

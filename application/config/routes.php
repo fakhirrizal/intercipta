@@ -73,6 +73,7 @@ $route['admin/user_location'] = 'admin/User_location';
 /* Team Leader */
 $route['team_leader/absent'] = 'team_leader/Check_in';
 $route['team_leader/absent_done'] = 'team_leader/Absent_done';
+$route['team_leader/status_absen'] = 'team_leader/Absent_status';
 $route['team_leader/report'] = 'team_leader/Report';
 $route['team_leader/absent_check'] = 'team_leader/Absent_check';
 $route['team_leader/report_competitor'] = 'team_leader/Report_competitor';
@@ -95,6 +96,7 @@ $route['pic/project_region_to_outlet'] = 'pic/Project_region_to_outlet';
 /* Front Liner */
 $route['front_liner/absent'] = 'front_liner/Check_in';
 $route['front_liner/absent_done'] = 'front_liner/Absent_done';
+$route['front_liner/status_absen'] = 'front_liner/Absent_status';
 $route['front_liner/report'] = 'front_liner/Report';
 $route['front_liner/delete_report'] = 'front_liner/Delete_report';
 
@@ -105,6 +107,11 @@ $route['front_liner/location'] = 'front_liner/Location';
 /* Non Front Liner */
 $route['non_front_liner/absent'] = 'non_front_liner/Check_in';
 $route['non_front_liner/absent_done'] = 'non_front_liner/Absent_done';
+
+/* Client */
+$route['client/project'] = 'client/Project';
+$route['client/report_tl'] = 'client/Report_tl';
+$route['client/report_competitor_tl'] = 'client/Report_competitor_tl';
 
 /*
 | -------------------------------------------------------------------------

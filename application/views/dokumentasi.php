@@ -1174,6 +1174,37 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse79" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;team_leader/status_absen?id_user={id_user}</a>
+														</h4>
+													</div>
+													<div id="collapse79" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Berfungsi untuk mengecek kehadiran team leader pada hari tertentu<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"status_absen": "masuk/ keluar",
+	"absen_today": "ya/ tidak"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
 															<a data-toggle="collapse" data-parent="#accordion" href="#collapse56" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;team_leader/absent_check?id_tl={id_user}&tanggal={YYYY-mm-dd}</a>
 														</h4>
 													</div>
@@ -2186,6 +2217,37 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse80" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;front_liner/status_absen?id_user={id_user}</a>
+														</h4>
+													</div>
+													<div id="collapse80" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Berfungsi untuk mengecek kehadiran front liner pada hari tertentu<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"status_absen": "masuk/ keluar",
+	"absen_today": "ya/ tidak"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
 															<a data-toggle="collapse" data-parent="#accordion" href="#collapse70" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;front_liner/location?id_user={id_user}</a>
 														</h4>
 													</div>
@@ -2218,7 +2280,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse55" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;front_liner/report?id_fl={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse55" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;front_liner/report?nik_fl={nik_fl}</a>
 														</h4>
 													</div>
 													<div id="collapse55" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2231,6 +2293,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																			<code>{
 	"id_laporan": "int",
 	"tgl_laporan": "YYYY-mm-dd HH:ii:ss",
+	"id_outlet": "int",
+	"nama_outlet": "string",
 	"nama_produk": "string",
 	"kode_produk": "string",
 	"kondisi": "return/ rusak/ kadaluarsa",
@@ -2238,7 +2302,6 @@ License: You must have a valid license purchased only from themeforest(the above
 	"foto": "url foto",
 	"keterangan": "string",
 	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
-	"tgl_keluar": "YYYY-mm-dd HH:ii:ss",
 	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss"
 }</code>
 																		</pre>
@@ -2271,6 +2334,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																			<code>{
 	"id_laporan": "int",
 	"tgl_laporan": "YYYY-mm-dd HH:ii:ss",
+	"id_outlet": "int",
+	"nama_outlet": "string",
 	"nama_produk": "string",
 	"kode_produk": "string",
 	"kondisi": "return/ rusak/ kadaluarsa",
@@ -2278,7 +2343,6 @@ License: You must have a valid license purchased only from themeforest(the above
 	"foto": "url foto",
 	"keterangan": "string",
 	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
-	"tgl_keluar": "YYYY-mm-dd HH:ii:ss",
 	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss"
 }</code>
 																		</pre>
@@ -2311,14 +2375,13 @@ License: You must have a valid license purchased only from themeforest(the above
 																			<code>{
 	"tgl_laporan": "YYYY-mm-dd HH:ii:ss",
 	"id_outlet": "int",
-	"id_user": "int",
+	"nik_fl": "int",
 	"kode_produk": "string",
 	"kondisi": "return/ rusak/ kadaluarsa",
 	"jumlah": "string",
 	"foto": "base64",
 	"keterangan": "string",
 	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
-	"tgl_keluar": "YYYY-mm-dd HH:ii:ss",
 	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss"
 }</code>
 																		</pre>
@@ -2359,7 +2422,6 @@ License: You must have a valid license purchased only from themeforest(the above
 	"foto": "base64",
 	"keterangan": "string",
 	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
-	"tgl_keluar": "YYYY-mm-dd HH:ii:ss",
 	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss"
 }</code>
 																		</pre>
@@ -2599,6 +2661,170 @@ License: You must have a valid license purchased only from themeforest(the above
 														</div>
 													</div>
 												</div>
+												<!-- End Parent and Child -->
+												<!-- Start Parent -->
+												<div class="heading">
+													<h4>
+														<a class="toggleEndpointList">Client</a>
+													</h4>
+												</div>
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse75" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;client/project?nik_client={nik_client}</a>
+														</h4>
+													</div>
+													<div id="collapse75" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk mengetahui project yang dimiliki client<br>Berikut keluran datanya,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																		<code>
+{
+    "data_utama": [
+        {
+            "id_project": "int",
+            "kode_project": "string",
+            "nama_project": "string",
+            "jumlah_region": "int"
+        }
+    ],
+    "data_detail": [
+        {
+            "id_project_region": "int",
+            "nama_region": "string",
+            "nama_tl": "string",
+            "id_region": "int"
+        }
+    ]
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Untuk atribut image berupa string <b>base64</b> dari sebuah foto, dan tipe data yang dibolehkan dari foto yang akan diupload adalah <b>.jpg</b></li>
+																	<li>Waktu laporan diambil saat data tersebut masuk ke database</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse76" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;client/project?kode_project={kode_project}</a>
+														</h4>
+													</div>
+													<div id="collapse76" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Mengambil data sebuah project berdasarkan project yang dipilih<br>Berikut keluaran datanya,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																		<code>
+{
+    "data_utama": [
+        {
+            "id_project": "int",
+            "kode_project": "string",
+            "nama_project": "string",
+            "jumlah_region": "int"
+        }
+    ],
+    "data_detail": [
+        {
+            "id_project_region": "int",
+            "nama_region": "string",
+            "nama_tl": "string",
+            "id_region": "int"
+        }
+    ]
+}</code>
+																		</pre>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse77" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;client/report_tl?id_tl={id_user}</a>
+														</h4>
+													</div>
+													<div id="collapse77" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Berfungsi untuk menampilkan data laporan dari seorang TL<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_laporan": "int",
+	"tgl_laporan": "YYYY-mm-dd HH:ii:ss",
+	"tipe_laporan": "sendiri/ kompetitor",
+	"foto_kondisi": "url foto",
+	"keterangan": "string",
+	"lat": "string",
+	"lng": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse78" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;client/report_competitor_tl?id_tl={id_user}</a>
+														</h4>
+													</div>
+													<div id="collapse78" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi ini menampilkan semua laporan bagaimana keadaan pesaing/ kompetitor yang dibuat seorang TL<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_report_competitor": "int",
+	"nama": "string",
+	"foto": "url foto",
+	"deskripsi": "string",
+	"waktu": "YYYY-mm-dd HH:ii:ss"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
 												<!-- End Parent and Child -->
 											</div>
                                         </div>

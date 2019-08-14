@@ -24,17 +24,21 @@ class Absent_done extends REST_Controller {
 				$get_status = $this->db->query($q3)->result();
 				if($get_status==NULL){
 					// $this->response(array('status' => 'Result not found', 502));
-					$this->response(array('status' => '0', 502));
+					// $this->response(array('status' => '0', 502));
+					echo'gagal';
 				}else{
-					$this->response($get_status, 200);
+					// $this->response($get_status, 200);
+					echo 'keluar';
 				}
 			}else{
 				// $this->response(array('status' => 'Fail change status', 502));
-				$this->response(array('status' => '0', 502));
+				// $this->response(array('status' => '0', 502));
+				echo'gagal';
 			}
 		}else{
 			// $this->response(array('status' => 'Fail absent', 502));
-			$this->response(array('status' => '0', 502));
+			// $this->response(array('status' => '0', 502));
+			echo'gagal';
 		}
     }
 }

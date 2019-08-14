@@ -28,7 +28,7 @@ class Check_in extends REST_Controller {
 				//upload absent photo to server
 				$file_name = $this->post('nama').$sekarang.".jpg";
 				$upload_folder_path = "assets/foto-absen";
-				$actual_path = "/home/u793339166/public_html/api-intercipta/".$upload_folder_path."/".$file_name;
+				$actual_path = "/home/opit5917/public_html/api-intercipta.aplikasiku.online/".$upload_folder_path."/".$file_name;
 				$image = $this->post('image');
 				if (file_put_contents($actual_path, base64_decode($image)) != null) {
 					$q = "INSERT INTO tb_absensi(tgl_absensi, nik_user, jam_masuk, foto, lat, lng, id_outlet, telat) VALUES('".$this->post('tgl_absensi')."', '".$this->post('nik')."', '".$this->post('jam_masuk')."', '".$file_name."', '".$this->post('lat')."', '".$this->post('lng')."','".$this->post('id_outlet')."', '".$this->post('telat')."')";
@@ -41,7 +41,8 @@ class Check_in extends REST_Controller {
 							$get_id = $this->db->query($q3)->result();
 							if($get_id==NULL){
 								// $this->response(array('status' => 'Result not found', 502));
-								$this->response(array('status' => '0', 502));
+								// $this->response(array('status' => '0', 502));
+								echo 'fail_absent';
 							}else{
 								$this->response($get_id, 200);
 							}

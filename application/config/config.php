@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/intercipta/';
-// $config['base_url'] = 'http://api-intercipta.gbnku.co.id/';
+// $config['base_url'] = 'http://api-intercipta.aplikasiku.online/';
 
 /*
 |--------------------------------------------------------------------------

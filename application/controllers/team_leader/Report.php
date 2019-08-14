@@ -29,7 +29,7 @@ class Report extends REST_Controller {
 	function index_post() {
 		$sekarang = date("Ymd_His");
 
-		// define('UPLOAD_DIR', '/home/u793339166/public_html/api-intercipta/assets/tl_report/');
+		// define('UPLOAD_DIR', '/home/opit5917/public_html/api-intercipta.aplikasiku.online/assets/tl_report/');
 		// $img = $this->post('foto_kondisi');
 		// $img = str_replace('data:image/png;base64,', '', $img);
 		// $img = str_replace(' ', '+', $img);
@@ -39,7 +39,7 @@ class Report extends REST_Controller {
 		// print $success ? $file : 'Unable to save the file.';
 
 		$file_name = $sekarang.".jpg";
-		$actual_path2 = "/home/u793339166/public_html/api-intercipta/assets/tl_report/".$file_name;
+		$actual_path2 = "/home/opit5917/public_html/api-intercipta.aplikasiku.online/assets/tl_report/".$file_name;
 		// $actual_path2 = dirname($_SERVER["SCRIPT_FILENAME"])."/assets/Team Leader's Report/";
 		$actual_path = base_url()."/assets/tl_report/".$file_name;
 		$image = $this->post('foto_kondisi');
@@ -59,7 +59,7 @@ class Report extends REST_Controller {
 		// $image = base64_decode($this->post("foto_kondisi"));
 		// $image_name = md5(uniqid(rand(), true));
 		// $filename = $image_name . '.' . 'jpg';
-		// $path = "/home/u793339166/public_html/api-intercipta/assets/tl_report/"
+		// $path = "/home/opit5917/public_html/api-intercipta.aplikasiku.online/assets/tl_report/"
 		// file_put_contents($path . $filename, $image);
 	}
 	function index_put() {
