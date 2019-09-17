@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/intercipta/';
-// $config['base_url'] = 'http://api-intercipta.aplikasiku.online/';
+$config['base_url'] = 'http://localhost:8080/intercipta/';
+// $config['base_url'] = 'http://intercipta.aplikasiku.online/';
 
 /*
 |--------------------------------------------------------------------------

@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;auth/login</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/auth/login</a>
 														</h4>
 													</div>
 													<div id="collapse1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -139,7 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;auth/username_check</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/auth/username_check</a>
 														</h4>
 													</div>
 													<div id="collapse12" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -162,6 +162,36 @@ License: You must have a valid license purchased only from themeforest(the above
 														</div>
 													</div>
 												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse81" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/auth/change_password</a>
+														</h4>
+													</div>
+													<div id="collapse81" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi yang berguna untuk mengubah kata sandi akun pengguna<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_user": "int",
+	"password_baru": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Index "id_user" digunakan sebagai parameter untuk mengubah data lain.</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
 												<!-- End Parent and Child -->
 												<!-- Start Parent -->
 												<div class="heading">
@@ -173,7 +203,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse58" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/user_location?id_user={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse58" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/user_location?id_user={id_user}</a>
 														</h4>
 													</div>
 													<div id="collapse58" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -205,7 +235,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse59" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;admin/user_location</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse59" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/admin/user_location</a>
 														</h4>
 													</div>
 													<div id="collapse59" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -237,7 +267,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/user_data</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/user_data</a>
 														</h4>
 													</div>
 													<div id="collapse2" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -259,7 +289,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	"status_absen": "masuk/ keluar",
 	"absen_today": "ya/ tidak",
 	"id_shift": "int",
-	"id_region": "int"
+	"id_region": "int",
+	"created_at": "Y-m-d H:i:s",
+	"updated_at": "Y-m-d H:i:s"
 }</code>
 																		</pre>
 																	</div>
@@ -278,7 +310,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/user_data?level={level}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/user_data?level={level}</a>
 														</h4>
 													</div>
 													<div id="collapse3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -300,7 +332,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	"status_absen": "masuk/ keluar",
 	"absen_today": "ya/ tidak",
 	"id_shift": "int",
-	"id_region": "int"
+	"id_region": "int",
+	"created_at": "Y-m-d H:i:s",
+	"updated_at": "Y-m-d H:i:s"
 }</code>
 																		</pre>
 																	</div>
@@ -319,7 +353,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;admin/user_data</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/admin/user_data</a>
 														</h4>
 													</div>
 													<div id="collapse4" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -357,7 +391,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;admin/user_data</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/admin/user_data</a>
 														</h4>
 													</div>
 													<div id="collapse5" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -391,7 +425,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/region</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/region</a>
 														</h4>
 													</div>
 													<div id="collapse6" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -423,7 +457,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse22" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/region?id={id}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse22" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/region?id={id}</a>
 														</h4>
 													</div>
 													<div id="collapse22" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -455,7 +489,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;admin/region</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/admin/region</a>
 														</h4>
 													</div>
 													<div id="collapse8" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -486,7 +520,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;admin/region</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/admin/region</a>
 														</h4>
 													</div>
 													<div id="collapse10" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -517,7 +551,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse27" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;admin/region</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse27" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;{url}/index.php/admin/region</a>
 														</h4>
 													</div>
 													<div id="collapse27" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -542,7 +576,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/outlet</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/outlet</a>
 														</h4>
 													</div>
 													<div id="collapse11" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -574,7 +608,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse24" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/outlet?id_outlet={id_outlet}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse24" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/outlet?id_outlet={id_outlet}</a>
 														</h4>
 													</div>
 													<div id="collapse24" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -606,7 +640,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse31" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;admin/outlet</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse31" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/admin/outlet</a>
 														</h4>
 													</div>
 													<div id="collapse31" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -639,7 +673,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse21" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;admin/outlet</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse21" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/admin/outlet</a>
 														</h4>
 													</div>
 													<div id="collapse21" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -671,7 +705,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse26" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;admin/outlet</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse26" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;{url}/index.php/admin/outlet</a>
 														</h4>
 													</div>
 													<div id="collapse26" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -696,7 +730,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse20" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/shift</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse20" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/shift</a>
 														</h4>
 													</div>
 													<div id="collapse20" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -729,7 +763,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse19" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/shift?id={id}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse19" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/shift?id={id}</a>
 														</h4>
 													</div>
 													<div id="collapse19" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -762,7 +796,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse18" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;admin/shift</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse18" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/admin/shift</a>
 														</h4>
 													</div>
 													<div id="collapse18" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -794,7 +828,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse17" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;admin/shift</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse17" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/admin/shift</a>
 														</h4>
 													</div>
 													<div id="collapse17" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -826,7 +860,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse25" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;admin/shift</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse25" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;{url}/index.php/admin/shift</a>
 														</h4>
 													</div>
 													<div id="collapse25" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -851,7 +885,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/project</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/project</a>
 														</h4>
 													</div>
 													<div id="collapse7" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -885,7 +919,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse32" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/project?id_project={id_project}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse32" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/project?id_project={id_project}</a>
 														</h4>
 													</div>
 													<div id="collapse32" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -919,7 +953,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse29" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;admin/project</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse29" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/admin/project</a>
 														</h4>
 													</div>
 													<div id="collapse29" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -951,7 +985,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse30" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;admin/project</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse30" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/admin/project</a>
 														</h4>
 													</div>
 													<div id="collapse30" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -986,7 +1020,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse28" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;admin/project</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse28" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;{url}/index.php/admin/project</a>
 														</h4>
 													</div>
 													<div id="collapse28" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1011,7 +1045,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse33" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/project_region</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse33" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/project_region</a>
 														</h4>
 													</div>
 													<div id="collapse33" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1043,7 +1077,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse34" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;admin/project_region?id_project_region={id_project_region}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse34" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/project_region?id_project_region={id_project_region}</a>
 														</h4>
 													</div>
 													<div id="collapse34" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1075,7 +1109,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse35" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;admin/project_region</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse35" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/admin/project_region</a>
 														</h4>
 													</div>
 													<div id="collapse35" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1111,7 +1145,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;team_leader/absent</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/team_leader/absent</a>
 														</h4>
 													</div>
 													<div id="collapse9" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1147,7 +1181,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse23" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;team_leader/absent_done</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse23" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/team_leader/absent_done</a>
 														</h4>
 													</div>
 													<div id="collapse23" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1174,7 +1208,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse79" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;team_leader/status_absen?id_user={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse79" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/team_leader/status_absen?id_user={id_user}</a>
 														</h4>
 													</div>
 													<div id="collapse79" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1205,7 +1239,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse56" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;team_leader/absent_check?id_tl={id_user}&tanggal={YYYY-mm-dd}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse56" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/team_leader/absent_check?id_tl={id_user}&tanggal={YYYY-mm-dd}</a>
 														</h4>
 													</div>
 													<div id="collapse56" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1237,7 +1271,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse70" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;team_leader/report_competitor?id_tl={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse70" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/team_leader/report_competitor?id_tl={id_user}</a>
 														</h4>
 													</div>
 													<div id="collapse70" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1271,7 +1305,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse71" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;team_leader/report_competitor</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse71" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/team_leader/report_competitor</a>
 														</h4>
 													</div>
 													<div id="collapse71" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1303,7 +1337,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse69" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;team_leader/report_competitor</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse69" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/team_leader/report_competitor</a>
 														</h4>
 													</div>
 													<div id="collapse69" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1336,7 +1370,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse48" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;team_leader/report?id_tl={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse48" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/team_leader/report?id_tl={id_user}</a>
 														</h4>
 													</div>
 													<div id="collapse48" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1372,7 +1406,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse47" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;team_leader/report?id_tl={id_user}&id_laporan={id_laporan}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse47" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/team_leader/report?id_tl={id_user}&id_laporan={id_laporan}</a>
 														</h4>
 													</div>
 													<div id="collapse47" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1408,7 +1442,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse46" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;team_leader/report</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse46" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/team_leader/report</a>
 														</h4>
 													</div>
 													<div id="collapse46" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1444,7 +1478,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse45" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;team_leader/report</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse45" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/team_leader/report</a>
 														</h4>
 													</div>
 													<div id="collapse45" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1481,7 +1515,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse44" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;team_leader/report</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse44" aria-expanded="false" class="collapsed"><span class="label label-danger">DELETE</span>&nbsp;{url}/index.php/team_leader/report</a>
 														</h4>
 													</div>
 													<div id="collapse44" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1512,7 +1546,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse60" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/fl_to_outlet</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse60" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/fl_to_outlet</a>
 														</h4>
 													</div>
 													<div id="collapse60" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1545,7 +1579,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse61" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/fl_to_outlet?id_region={id_region}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse61" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/fl_to_outlet?id_region={id_region}</a>
 														</h4>
 													</div>
 													<div id="collapse61" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1576,7 +1610,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse62" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/fl_to_outlet?id_outlet={id_outlet}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse62" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/fl_to_outlet?id_outlet={id_outlet}</a>
 														</h4>
 													</div>
 													<div id="collapse62" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1610,7 +1644,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse49" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;pic/fl_to_outlet</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse49" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/pic/fl_to_outlet</a>
 														</h4>
 													</div>
 													<div id="collapse49" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1643,7 +1677,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse50" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;pic/fl_to_outlet</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse50" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/pic/fl_to_outlet</a>
 														</h4>
 													</div>
 													<div id="collapse50" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1676,7 +1710,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse63" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;pic/delete_fl_to_outlet?id={$id}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse63" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;{url}/index.php/pic/delete_fl_to_outlet?id={$id}</a>
 														</h4>
 													</div>
 													<div id="collapse63" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1705,7 +1739,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse36" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/project?nik_pic={nik_pic}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse36" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/project?nik_pic={nik_pic}</a>
 														</h4>
 													</div>
 													<div id="collapse36" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1735,7 +1769,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse37" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/project?nik_pic={nik_pic}&kode_project={kode_project}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse37" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/project?nik_pic={nik_pic}&kode_project={kode_project}</a>
 														</h4>
 													</div>
 													<div id="collapse37" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1783,7 +1817,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse41" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;pic/project_region</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse41" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/pic/project_region</a>
 														</h4>
 													</div>
 													<div id="collapse41" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1809,7 +1843,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse40" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;pic/project_region</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse40" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/pic/project_region</a>
 														</h4>
 													</div>
 													<div id="collapse40" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1841,7 +1875,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse64" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;pic/delete_project_region?id_project_region={id_project_region}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse64" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;{url}/index.php/pic/delete_project_region?id_project_region={id_project_region}</a>
 														</h4>
 													</div>
 													<div id="collapse64" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1870,7 +1904,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse38" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/project_region?id_project_region={id_project_region}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse38" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/project_region?id_project_region={id_project_region}</a>
 														</h4>
 													</div>
 													<div id="collapse38" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1915,7 +1949,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse74" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;pic/project_region_to_outlet</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse74" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/pic/project_region_to_outlet</a>
 														</h4>
 													</div>
 													<div id="collapse74" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1946,7 +1980,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse73" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;pic/project_region_to_outlet</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse73" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/pic/project_region_to_outlet</a>
 														</h4>
 													</div>
 													<div id="collapse73" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -1977,7 +2011,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse72" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;pic/project_region_to_outlet?id_project_region_to_outlet={id_project_region_to_outlet}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse72" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;{url}/index.php/pic/project_region_to_outlet?id_project_region_to_outlet={id_project_region_to_outlet}</a>
 														</h4>
 													</div>
 													<div id="collapse72" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2002,7 +2036,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse39" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/outlet?id_outlet={id_outlet}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse39" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/outlet?id_outlet={id_outlet}</a>
 														</h4>
 													</div>
 													<div id="collapse39" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2044,7 +2078,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<!-- <div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse42" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/outlet2?id_outlet={id_outlet}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse42" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/outlet2?id_outlet={id_outlet}</a>
 														</h4>
 													</div>
 													<div id="collapse42" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2071,7 +2105,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse43" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/team_leader?id_region={id_region}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse43" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/team_leader?id_region={id_region}</a>
 														</h4>
 													</div>
 													<div id="collapse43" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2102,7 +2136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse57" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;pic/penjualan?kode_produk={kode_produk}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse57" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/penjualan?kode_produk={kode_produk}</a>
 														</h4>
 													</div>
 													<div id="collapse57" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2155,7 +2189,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;front_liner/absent</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/front_liner/absent</a>
 														</h4>
 													</div>
 													<div id="collapse13" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2190,7 +2224,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;front_liner/absent_done</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/front_liner/absent_done</a>
 														</h4>
 													</div>
 													<div id="collapse14" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2217,7 +2251,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse80" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;front_liner/status_absen?id_user={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse80" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/status_absen?id_user={id_user}</a>
 														</h4>
 													</div>
 													<div id="collapse80" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2248,7 +2282,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse70" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;front_liner/location?id_user={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse70" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/location?id_user={id_user}</a>
 														</h4>
 													</div>
 													<div id="collapse70" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2280,7 +2314,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse55" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;front_liner/report?nik_fl={nik_fl}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse55" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/report?nik_fl={nik_fl}</a>
 														</h4>
 													</div>
 													<div id="collapse55" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2321,7 +2355,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse54" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;front_liner/report?id_laporan={id_laporan}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse54" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/report?id_laporan={id_laporan}</a>
 														</h4>
 													</div>
 													<div id="collapse54" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2362,7 +2396,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse53" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;front_liner/report</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse53" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/front_liner/report</a>
 														</h4>
 													</div>
 													<div id="collapse53" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2401,7 +2435,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse52" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;front_liner/report</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse52" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/front_liner/report</a>
 														</h4>
 													</div>
 													<div id="collapse52" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2441,7 +2475,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse51" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;front_liner/delete_report?id_laporan={id_laporan}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse51" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;{url}/index.php/front_liner/delete_report?id_laporan={id_laporan}</a>
 														</h4>
 													</div>
 													<div id="collapse51" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2470,7 +2504,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse68" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;front_liner/report_competitor?id_fl={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse68" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/report_competitor?id_fl={id_user}</a>
 														</h4>
 													</div>
 													<div id="collapse68" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2504,7 +2538,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse67" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;front_liner/report_competitor</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse67" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/front_liner/report_competitor</a>
 														</h4>
 													</div>
 													<div id="collapse67" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2536,7 +2570,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse66" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;front_liner/report_competitor</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse66" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/front_liner/report_competitor</a>
 														</h4>
 													</div>
 													<div id="collapse66" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2569,7 +2603,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse65" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;front_liner/delete_report_competitor?id_report_competitor={id_report_competitor}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse65" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;{url}/index.php/front_liner/delete_report_competitor?id_report_competitor={id_report_competitor}</a>
 														</h4>
 													</div>
 													<div id="collapse65" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2604,7 +2638,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;non_front_liner/absent</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/non_front_liner/absent</a>
 														</h4>
 													</div>
 													<div id="collapse15" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2639,7 +2673,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse16" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;non_front_liner/absent_done</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse16" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/non_front_liner/absent_done</a>
 														</h4>
 													</div>
 													<div id="collapse16" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2672,7 +2706,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse75" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;client/project?nik_client={nik_client}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse75" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/client/project?nik_client={nik_client}</a>
 														</h4>
 													</div>
 													<div id="collapse75" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2718,7 +2752,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse76" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;client/project?kode_project={kode_project}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse76" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/client/project?kode_project={kode_project}</a>
 														</h4>
 													</div>
 													<div id="collapse76" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2759,7 +2793,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse77" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;client/report_tl?id_tl={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse77" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/client/report_tl?id_tl={id_user}</a>
 														</h4>
 													</div>
 													<div id="collapse77" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2795,7 +2829,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse78" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;client/report_competitor_tl?id_tl={id_user}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse78" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/client/report_competitor_tl?id_tl={id_user}</a>
 														</h4>
 													</div>
 													<div id="collapse78" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">

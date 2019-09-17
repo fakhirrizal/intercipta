@@ -41,8 +41,9 @@ class User_data extends REST_Controller {
 		post id_shift
 		*/
 		$enc_password = password_hash($this->post('password'), PASSWORD_DEFAULT);
+		$cur_date = date('Y-m-d H:i:s');
 		if($this->post('level') == "fl" || $this->post('level') == "non_fl"){
-			$q = "INSERT INTO tb_user(nik, nama, alamat, email, password, nohp, level, id_shift) VALUES('".$this->post('nik')."','".$this->post('nama')."','".$this->post('alamat')."','".$this->post('email')."','".$enc_password."','".$this->post('nohp')."','".$this->post('level')."','".$this->post('id_shift')."')";
+			$q = "INSERT INTO tb_user(nik, nama, alamat, email, password, nohp, level, id_shift, created_at) VALUES('".$this->post('nik')."','".$this->post('nama')."','".$this->post('alamat')."','".$this->post('email')."','".$enc_password."','".$this->post('nohp')."','".$this->post('level')."','".$this->post('id_shift')."','".$cur_date."')";
 			$insert_to_table = $this->db->query($q);
 			if($insert_to_table=='1'){
 				//$this->response(array('status' => 'Success', 200));
@@ -52,7 +53,7 @@ class User_data extends REST_Controller {
                 echo "failed";
 			}
 		}else{
-			$q = "INSERT INTO tb_user(nik, nama, alamat, email, password, nohp, level, id_region) VALUES('".$this->post('nik')."','".$this->post('nama')."','".$this->post('alamat')."','".$this->post('email')."','".$enc_password."','".$this->post('nohp')."','".$this->post('level')."','".$this->post('id_region')."')";
+			$q = "INSERT INTO tb_user(nik, nama, alamat, email, password, nohp, level, id_region, created_at) VALUES('".$this->post('nik')."','".$this->post('nama')."','".$this->post('alamat')."','".$this->post('email')."','".$enc_password."','".$this->post('nohp')."','".$this->post('level')."','".$this->post('id_region')."','".$cur_date."')";
 			$insert_to_table = $this->db->query($q);
 			if($insert_to_table=='1'){
 				//$this->response(array('status' => 'Success', 200));
@@ -70,7 +71,8 @@ class User_data extends REST_Controller {
 					'nama'       => $this->put('nama'),
 					'alamat'       => $this->put('alamat'),
 					'email'       => $this->put('email'),
-                    'nohp'    => $this->put('nohp'));
+					'nohp'    => $this->put('nohp'),
+					'updated_at' => date('Y-m-d H:i:s'));
         $this->db->where('id_user', $this->put('id_user'));
         $update = $this->db->update('tb_user', $data);
         if ($update) {

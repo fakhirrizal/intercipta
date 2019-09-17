@@ -12,7 +12,7 @@ class Delete_project extends REST_Controller {
 		// $json = json_decode($post, true);
         $data = array(
 					'deleted'       => "1");
-        $this->db->where('id_project', $this->delete('id_project'));
+        $this->db->where('id_project', $this->get('id_project'));
         $update = $this->db->update('tb_project', $data);
         if ($update) {
 			// $this->response(array('status' => 'Update is successful', 200));
