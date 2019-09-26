@@ -686,8 +686,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																			<code>{
 	"id_outlet": "int",
 	"nama": "string",
-	"id_shift_pagi": "int",
-	"id_shift_sore": "int"
+	"id_region": "int"
 }</code>
 																		</pre>
 																	</div>

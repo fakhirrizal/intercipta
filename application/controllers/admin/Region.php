@@ -9,7 +9,7 @@ class Region extends REST_Controller {
     }
     function index_get() {
 		if($this->get('id')==NULL){
-			$q = "SELECT a.id,a.nama_region,a.provinsi FROM tb_region a WHERE a.deleted='0'";
+			$q = "SELECT a.id,a.nama_region,a.provinsi FROM tb_region a WHERE a.deleted='0' ORDER BY `a`.`nama_region` ASC";
 			$get_data = $this->db->query($q)->result();
 			if($get_data==NULL){
 				// $this->response(array('status' => 'Result not found', 502));
@@ -19,7 +19,7 @@ class Region extends REST_Controller {
 				$this->response($get_data, 200);
 			}
 		}else{
-			$q = "SELECT a.id,a.nama_region,a.provinsi FROM tb_region a WHERE a.id = '".$this->get('id')."' AND a.deleted='0'";
+			$q = "SELECT a.id,a.nama_region,a.provinsi FROM tb_region a WHERE a.id = '".$this->get('id')."' AND a.deleted='0' ORDER BY `a`.`nama_region` ASC";
 			$get_data = $this->db->query($q)->result();
 			if($get_data==NULL){
 				// $this->response(array('status' => 'Result not found', 502));
