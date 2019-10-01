@@ -57,6 +57,7 @@ $route['auth/login'] = 'auth/Login';
 $route['auth/register'] = 'auth/Register';
 $route['auth/username_check'] = 'auth/Username_check';
 $route['auth/change_password'] = 'auth/Change_password';
+$route['auth/logout'] = 'auth/Logout';
 
 /* Admin */
 $route['admin/user_data'] = 'admin/User_data';

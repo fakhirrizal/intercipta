@@ -17,7 +17,15 @@ class Login extends REST_Controller {
 			}else{
 				foreach ($cek_email as $key => $value) {
 					if(password_verify($this->post('password'), $value->password)) {
-						$this->response($cek_email, 200);
+						if($value->login_status=='1'){
+							echo 'login';
+						}else{
+							$data = array(
+								'login_status'    => '1');
+							$this->db->where('id_user', $value->id_user);
+							$this->db->update('tb_user', $data);
+							$this->response($cek_email, 200);
+						}
 					}else{
 						// $this->response(array('status' => 'Invalid password', 502));
 						echo "invalid";

@@ -139,6 +139,30 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse82" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/auth/logout</a>
+														</h4>
+													</div>
+													<div id="collapse82" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_user": "int"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
 															<a data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/auth/username_check</a>
 														</h4>
 													</div>
