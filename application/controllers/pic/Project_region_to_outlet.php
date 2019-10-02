@@ -20,14 +20,15 @@ class Project_region_to_outlet extends REST_Controller {
 				'id_outlet' => $this->post('id_outlet'),
 				'deleted' => '0'
 			);
-			$cek2 = $this->Master_model->getSelectedData('id_outlet',$where2);
+			$cek2 = $this->Master_model->getSelectedData('tb_outlet',$where2);
 			if($cek2==NULL){
 				// $this->response(array('status' => 'NIK tidak valid', 502));
                 echo "id_outlet invalid";
 			}else{
 				$data = array(
 					'id_project_region' => $this->post('id_project_region'),
-					'id_outlet' => $this->post('id_outlet')
+					'id_outlet' => $this->post('id_outlet'),
+					'id_client' => $this->post('id_client')
 				);
 				$cek3 = $this->Master_model->getSelectedData('tb_project_region_to_outlet',$data);
 				if($cek3==NULL){
@@ -45,7 +46,7 @@ class Project_region_to_outlet extends REST_Controller {
 	}
 	function index_put() {
 		$this->db->trans_start();
-		$q = "SELECT a.* FROM tb_project_region_to_outlet a WHERE a.id_project_region='".$this->put('id_project_region')."' AND a.id_outlet='".$this->put('id_outlet')."' AND a.id_project_region_to_outlet NOT IN (".$this->put('id_project_region_to_outlet').")";
+		$q = "SELECT a.* FROM tb_project_region_to_outlet a WHERE a.id_project_region='".$this->put('id_project_region')."' AND a.id_outlet='".$this->put('id_outlet')."' AND a.id_client='".$this->put('id_client')."' AND a.id_project_region_to_outlet NOT IN (".$this->put('id_project_region_to_outlet').")";
 		$get_data = $this->db->query($q)->result();
 		if($get_data==NULL){
 	        $data = array(

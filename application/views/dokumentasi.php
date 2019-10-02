@@ -1774,6 +1774,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<pre>
 																			<code>{
 	"id_project": "int",
+	"id_client": "int",
 	"client": "string",
 	"kode_project": "string",
 	"nama_project": "string",
@@ -1807,6 +1808,7 @@ License: You must have a valid license purchased only from themeforest(the above
     "data_utama": [
         {
             "id_project": "int",
+            "id_client": "int",
             "client": "string",
             "kode_project": "string",
             "nama_project": "string",
@@ -1984,7 +1986,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<pre>
 																			<code>{
 	"id_project_region": "int",
-	"id_outlet": "int"
+	"id_outlet": "int",
+	"id_client": "int"
 }</code>
 																		</pre>
 																	</div>
@@ -2016,7 +2019,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																			<code>{
 	"id_project_region_to_outlet": "int",
 	"id_project_region": "int",
-	"id_outlet": "int"
+	"id_outlet": "int",
+	"id_client": "int"
 }</code>
 																		</pre>
 																	</div>
@@ -2092,6 +2096,38 @@ License: You must have a valid license purchased only from themeforest(the above
 																<ul>
 																	<li>Array data front liner outlet bisa memiliki lebih dari 1 nilai.</li>
 																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse83" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/outlet?id_project_region={id_project_region}</a>
+														</h4>
+													</div>
+													<div id="collapse83" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk melihat data outlet berdasarkan id_project_region<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																		<code>
+{
+    "id_outlet": "int",
+    "nama_outlet": "string",
+    "nama_tl": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Array data front liner outlet bisa memiliki lebih dari 1 nilai.</li>
+																</ul> -->
 															</div>
 														</div>
 													</div>
