@@ -14,7 +14,8 @@ class Project_region_to_outlet extends REST_Controller {
 		$cek1 = $this->Master_model->getSelectedData('tb_project_region',$where1);
 		if($cek1==NULL){
 			// $this->response(array('status' => 'NIK tidak valid', 502));
-            echo "id_project_region invalid";
+			// echo "id_project_region invalid";
+			echo "failed";
 		}else{
 			$where2 = array(
 				'id_outlet' => $this->post('id_outlet'),
@@ -23,7 +24,8 @@ class Project_region_to_outlet extends REST_Controller {
 			$cek2 = $this->Master_model->getSelectedData('tb_outlet',$where2);
 			if($cek2==NULL){
 				// $this->response(array('status' => 'NIK tidak valid', 502));
-                echo "id_outlet invalid";
+				// echo "id_outlet invalid";
+				echo "failed";
 			}else{
 				$data = array(
 					'id_project_region' => $this->post('id_project_region'),

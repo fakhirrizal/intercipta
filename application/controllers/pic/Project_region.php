@@ -11,7 +11,7 @@ class Project_region extends REST_Controller {
 		$q = "SELECT a.id AS id_project_region,a.kode_project,b.nama_project,c.nama_region,d.nama AS nama_tl FROM tb_project_region a LEFT JOIN tb_project b ON a.kode_project=b.kode_project LEFT JOIN tb_region c ON a.id_region=c.id LEFT JOIN tb_user d ON a.id_tl=d.id_user WHERE a.id='".$this->get('id_project_region')."' AND b.status='1' AND b.deleted='0' AND c.deleted='0'";
 		$get_data['data_utama'] = $this->db->query($q)->result();
 		// $qq = "SELECT a.id_outlet,a.nama_outlet,(SELECT COUNT(b.id) FROM tb_fl_to_outlet b WHERE b.id_outlet=a.id_outlet) AS jumlah_fl FROM tb_outlet a WHERE a.id_project_region='".$this->get('id_project_region')."' AND a.deleted='0'";
-		$qq = "SELECT a.id_outlet,b.nama_outlet,(SELECT COUNT(c.id) FROM tb_fl_to_outlet c WHERE c.id_project_region_to_outlet=a.id_project_region_to_outlet) AS jumlah_fl FROM tb_project_region_to_outlet a LEFT JOIN tb_outlet b ON a.id_outlet=b.id_outlet WHERE a.id_project_region='".$this->get('id_project_region')."'";
+		$qq = "SELECT a.id_project_region_to_outlet,a.id_outlet,b.nama_outlet,(SELECT COUNT(c.id) FROM tb_fl_to_outlet c WHERE c.id_project_region_to_outlet=a.id_project_region_to_outlet) AS jumlah_fl FROM tb_project_region_to_outlet a LEFT JOIN tb_outlet b ON a.id_outlet=b.id_outlet WHERE a.id_project_region='".$this->get('id_project_region')."'";
 		$get_data['data_outlet'] = $this->db->query($qq)->result();
 		if($get_data==NULL){
 			// $this->response(array('status' => 'Result not found', 502));

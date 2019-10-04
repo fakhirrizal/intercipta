@@ -10,7 +10,7 @@ class Outlet extends REST_Controller {
 	function index_get() {
 		// $q = "SELECT a.id_outlet,a.nama_outlet,d.nama AS nama_tl FROM tb_outlet a LEFT JOIN tb_project_region b ON a.id_project_region=b.id LEFT JOIN tb_user d ON b.id_tl=d.id_user WHERE a.id_outlet='".$this->get('id_outlet')."' AND a.deleted='0'";
 		// $get_data['data_utama'] = $this->db->query($q)->result();
-		if($this->get('id_project_region')!=NULL){
+		if($this->get('id_region')!=NULL){
 			// $get_data = $this->Master_model->getSelectedData('tb_project_region_to_outlet a', 'a.id_outlet,b.nama_outlet,d.nama AS nama_tl',array('a.id_project_region'=>$this->get('id_project_region'),'b.deleted'=>'0'),'','','','',array(
 			// 	array(
 			// 		'table' => 'tb_outlet b',
@@ -33,7 +33,7 @@ class Outlet extends REST_Controller {
 			// }else{
 			// 	$this->response($get_data, 200);
 			// }
-			$q = "SELECT a.id_outlet,b.nama_outlet,d.nama AS nama_tl FROM tb_project_region_to_outlet a LEFT JOIN tb_outlet b ON a.id_outlet=b.id_outlet LEFT JOIN tb_project_region c ON a.id_project_region=c.id LEFT JOIN tb_user d ON c.id_tl=d.id_user WHERE a.id_project_region='".$this->get('id_project_region')."' AND b.deleted='0'";
+			$q = "SELECT b.id_outlet,b.nama_outlet FROM tb_outlet b WHERE b.id_region='".$this->get('id_region')."' AND b.deleted='0'";
 			$get_data = $this->db->query($q)->result();
 			if($get_data==NULL){
 				echo "no_data";

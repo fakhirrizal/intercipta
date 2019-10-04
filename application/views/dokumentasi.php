@@ -355,8 +355,8 @@ License: You must have a valid license purchased only from themeforest(the above
 	"level": "admin/ pic/ tl/ fl/ client/ non_fl/ payroll",
 	"status_absen": "masuk/ keluar",
 	"absen_today": "ya/ tidak",
-	"id_shift": "int",
-	"id_region": "int",
+	"nama_shift": "string",
+	"nama_region": "string",
 	"created_at": "Y-m-d H:i:s",
 	"updated_at": "Y-m-d H:i:s"
 }</code>
@@ -431,7 +431,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	"nama": "string",
 	"alamat": "string",
 	"email": "string",
-	"nohp": "string"
+	"nohp": "string",
+	"id_shift": "int",
+	"id_region": "int"
 }</code>
 																		</pre>
 																	</div>
@@ -1952,6 +1954,7 @@ License: You must have a valid license purchased only from themeforest(the above
     ],
     "data_outlet": [
         {
+            "id_project_region_to_outlet": "int",
             "id_outlet": "int",
             "nama_outlet": "string",
             "jumlah_fl": "int"
@@ -2105,7 +2108,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse83" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/outlet?id_project_region={id_project_region}</a>
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse83" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/outlet?id_region={id_region}</a>
 														</h4>
 													</div>
 													<div id="collapse83" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
@@ -2118,8 +2121,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<code>
 {
     "id_outlet": "int",
-    "nama_outlet": "string",
-    "nama_tl": "string"
+    "nama_outlet": "string"
 }</code>
 																		</pre>
 																	</div>
