@@ -32,7 +32,7 @@ class Check_in extends REST_Controller {
 		}
 		$file_name = $this->post('nama').$sekarang.".jpg";
         $upload_folder_path = "assets/foto-absen";
-        $actual_path = "/home/opit5917/public_html/api-intercipta.aplikasiku.online/".$upload_folder_path."/".$file_name;
+        $actual_path = "/home/aplikasi/public_html/intercipta/".$upload_folder_path."/".$file_name;
         $image = $this->post('image');
 
 		$q5 = "SELECT a.* FROM tb_absensi a WHERE a.tgl_absensi = '".$this->post('tgl_absensi')."' AND a.nik_user = '".$this->post('nik')."'";

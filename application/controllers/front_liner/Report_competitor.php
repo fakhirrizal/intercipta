@@ -31,7 +31,7 @@ class Report_competitor extends REST_Controller {
 	function index_post() {
 		$sekarang = date("Ymd_His");
 		$file_name = $sekarang.".jpg";
-		$actual_path = "/home/opit5917/public_html/api-intercipta.aplikasiku.online/assets/fl_report/".$file_name;
+		$actual_path = "/home/aplikasi/public_html/intercipta/assets/fl_report/".$file_name;
 		$actual_path2 = base_url()."assets/fl_report/".$file_name;
 		$image = $this->post('foto');
 		if (file_put_contents($actual_path, base64_decode($image)) != null) {

@@ -9,23 +9,32 @@ class Fl_to_outlet extends REST_Controller {
 	}
 	function index_get() {
 		if($this->get('id_region')!=NULL){
-			$q = "SELECT a.id_user AS id,a.nama AS nama_fl,(SELECT COUNT(b.id_fl) FROM tb_fl_to_outlet b WHERE b.id_fl=a.id_user GROUP BY b.id_fl) AS jml FROM tb_user a WHERE a.level='fl' AND a.id_region='".$this->get('id_region')."'";
+		// 	$q = "SELECT a.id_user AS id,a.nama AS nama_fl,(SELECT COUNT(b.id_fl) FROM tb_fl_to_outlet b WHERE b.id_fl=a.id_user GROUP BY b.id_fl) AS jml FROM tb_user a WHERE a.level='fl' AND a.id_region='".$this->get('id_region')."'";
+		// 	$get_data = $this->db->query($q)->result();
+		// 	$data = array();
+		// 	foreach ($get_data as $key => $value) {
+		// 		if($value->jml=='0'){
+		// 			$isi['id'] = $value->id;
+		// 			$isi['nama_fl'] = $value->nama_fl;
+		// 			$data[] = $isi;
+		// 		}else{
+		// 			echo '';
+		// 		}
+		// 	}
+		// 	if($data==NULL){
+		// 		$r = array();
+		// 		$this->response($r, 200);
+		// 	}else{
+		// 		$this->response($data, 200);
+		// 	}
+		// }
+			$q = "SELECT a.id_user AS id,a.nama AS nama_fl FROM tb_user a WHERE a.level='fl' AND a.id_region='".$this->get('id_region')."'";
 			$get_data = $this->db->query($q)->result();
-			$data = array();
-			foreach ($get_data as $key => $value) {
-				if($value->jml=='0'){
-					$isi['id'] = $value->id;
-					$isi['nama_fl'] = $value->nama_fl;
-					$data[] = $isi;
-				}else{
-					echo '';
-				}
-			}
-			if($data==NULL){
+			if($get_data==NULL){
 				$r = array();
 				$this->response($r, 200);
 			}else{
-				$this->response($data, 200);
+				$this->response($get_data, 200);
 			}
 		}
 		// elseif($this->get('id_fl')!=NULL){
@@ -68,17 +77,23 @@ class Fl_to_outlet extends REST_Controller {
 		if($getid==NULL){
 			echo 'failed';
 		}else{
-			$q = "INSERT INTO tb_fl_to_outlet(id_project_region_to_outlet, id_fl, id_shift) VALUES('".$getid->id_project_region_to_outlet."','".$this->post('id_user')."','".$this->post('id_shift')."')";
-			$insert_to_table = $this->db->query($q);
-			if($insert_to_table=='1'){
-				// $this->response(array('status' => 'Success', 200));
-				// $this->response(array('status' => '1', 200));
-				echo "success";
+			$check = $this->db->query("SELECT a.* FROM tb_fl_to_outlet a WHERE a.id_fl = '".$this->post('id_user')."'")->result();
+			if($check==NULL){
+				$q = "INSERT INTO tb_fl_to_outlet(id_project_region_to_outlet, id_fl, id_shift) VALUES('".$getid->id_project_region_to_outlet."','".$this->post('id_user')."','".$this->post('id_shift')."')";
+				$insert_to_table = $this->db->query($q);
+				if($insert_to_table=='1'){
+					// $this->response(array('status' => 'Success', 200));
+					// $this->response(array('status' => '1', 200));
+					echo "success";
+				}else{
+					// $this->response(array('status' => 'Failed, please try again!', 502));
+					// $this->response(array('status' => '0', 502));
+					echo "failed";
+				}
 			}else{
-				// $this->response(array('status' => 'Failed, please try again!', 502));
-				// $this->response(array('status' => '0', 502));
-				echo "failed";
+				echo'existed';
 			}
+			
 		}
 	}
 	function index_put() {

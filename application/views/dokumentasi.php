@@ -451,6 +451,36 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse84" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/admin/status_login</a>
+														</h4>
+													</div>
+													<div id="collapse84" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_user": "int",
+	"status": "0/ 1"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Index "id_user" digunakan sebagai parameter untuk mengubah data lain.</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child-->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
 															<a data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/region</a>
 														</h4>
 													</div>
@@ -2536,6 +2566,151 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse85" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/report_penjualan?id_user={id_user}</a>
+														</h4>
+													</div>
+													<div id="collapse85" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi ini menampilkan semua laporan penjualan yang dibuat seorang FL<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_laporan": "int",
+	"id_user": "int",
+	"nama": "string",
+	"nama_produk": "string",
+	"kode_produk": "string",
+	"stok_awal": "int",
+	"jumlah_tambahan": "int",
+	"stok_akhir": "int",
+	"tanggal_report": "YYYY-mm-dd HH:ii:ss"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse86" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/report_penjualan?id_laporan={id_laporan}</a>
+														</h4>
+													</div>
+													<div id="collapse86" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi ini untuk mendapatkan report penjualan FL berdasarkan id_laporan yang dipilih<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_laporan": "int",
+	"id_user": "int",
+	"nama": "string",
+	"nama_produk": "string",
+	"kode_produk": "string",
+	"stok_awal": "int",
+	"stok_akhir": "int",
+	"tanggal_report": "YYYY-mm-dd HH:ii:ss"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse87" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/front_liner/report_penjualan</a>
+														</h4>
+													</div>
+													<div id="collapse87" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk menyimpan data laporan oleh FL<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_user": "id_user",
+	"kode_produk": "string",
+	"stok_awal": "int",
+	"jumlah_tambahan": "int",
+	"stok_akhir": "int",
+	"tanggal_report": "YYYY-mm-dd HH:ii:ss"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan : -->
+																<ul>
+																	<!-- <li>Untuk foto berupa string <b>base64</b> dari sebuah foto, dan tipe data yang dibolehkan dari foto yang akan diupload adalah <b>.jpg</b></li> -->
+																	<!-- <li>Kode kelompok, diambil dari tabel kelompok</li> -->
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse88" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/front_liner/report_penjualan</a>
+														</h4>
+													</div>
+													<div id="collapse88" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk mengubah data laporan penjualan oleh FL<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_laporan": "int",
+	"id_user": "int",
+	"kode_produk": "string",
+	"stok_awal": "string",
+	"jumlah_tambahan": "string",
+	"stok_akhir": "int",
+	"tanggal_report": "YYYY-mm-dd HH:ii:ss"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Index "id_laporan" digunakan sebagai parameter untuk mengubah data lain.</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child-->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
 															<a data-toggle="collapse" data-parent="#accordion" href="#collapse51" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;{url}/index.php/front_liner/delete_report?id_laporan={id_laporan}</a>
 														</h4>
 													</div>
@@ -2652,7 +2827,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																</div>
 																Keterangan :
 																<ul>
-																	<li>Index "id_laporan" digunakan sebagai parameter untuk mengubah data lain.</li>
+																	<li>Index "id_report_competitor" digunakan sebagai parameter untuk mengubah data lain.</li>
 																	<li>Untuk atribut foto, persyaratan sama dengan method <b>POST</b></li>
 																</ul>
 															</div>
@@ -2670,6 +2845,137 @@ License: You must have a valid license purchased only from themeforest(the above
 													<div id="collapse65" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
 														<div class="panel-body">
 															Fungsi untuk menghapus data laporan kompetitor
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<!-- <pre>
+																			<code>{
+	"id_report_competitor": "int"
+}</code>
+																		</pre> -->
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Output hanya ada 2 yaitu '<b>success</b>' dan '<b>failed</b>'</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child-->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse92" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/report_aktivitas?id_user={id_user}</a>
+														</h4>
+													</div>
+													<div id="collapse92" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi ini menampilkan semua laporan aktivitas dari seorang FL<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_laporan": "int",
+	"id_user": "int",
+	"nama": "string",
+	"foto_outlet": "url foto",
+	"keterangan": "string",
+	"tgl": "YYYY-mm-dd HH:ii:ss"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse91" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/front_liner/report_aktivitas</a>
+														</h4>
+													</div>
+													<div id="collapse91" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk menyimpan laporan dari kompetitor oleh seorang FL<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_user": "int",
+	"foto_outlet": "base64",
+	"keterangan": "string",
+	"tgl": "YYYY-mm-dd HH:ii:ss"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Untuk foto berupa string <b>base64</b> dari sebuah foto, dan tipe data yang dibolehkan dari foto yang akan diupload adalah <b>.jpg</b></li>
+																	<!-- <li>Waktu laporan diambil saat data tersebut masuk ke database</li> -->
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse90" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/front_liner/report_aktivitas</a>
+														</h4>
+													</div>
+													<div id="collapse90" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk mengubah data laporan aktivitas FL<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_laporan": "int",
+	"id_user": "int",
+	"foto_outlet": "base64",
+	"keterangan": "string",
+	"tgl": "YYYY-mm-dd HH:ii:ss"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Index "id_laporan" digunakan sebagai parameter untuk mengubah data lain.</li>
+																	<li>Untuk atribut foto_outlet, persyaratan sama dengan method <b>POST</b></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child-->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse89" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;{url}/index.php/front_liner/delete_report_aktivitas?id_laporan={id_laporan}</a>
+														</h4>
+													</div>
+													<div id="collapse89" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk menghapus data laporan aktifitas dari FL
 															<div class="signature-container">
 																<div class="snippet" style="display: block;">
 																	<div class="snippet_json" style="display: block;">

@@ -61,6 +61,7 @@ $route['auth/logout'] = 'auth/Logout';
 
 /* Admin */
 $route['admin/user_data'] = 'admin/User_data';
+$route['admin/status_login'] = 'admin/Status_login';
 $route['admin/outlet'] = 'admin/Outlet';
 $route['admin/delete_outlet'] = 'admin/Delete_outlet';
 $route['admin/region'] = 'admin/Region';
@@ -102,6 +103,8 @@ $route['front_liner/status_absen'] = 'front_liner/Absent_status';
 $route['front_liner/report'] = 'front_liner/Report';
 $route['front_liner/delete_report'] = 'front_liner/Delete_report';
 
+$route['front_liner/report_penjualan'] = 'front_liner/Report_penjualan';
+$route['front_liner/report_aktivitas'] = 'front_liner/Report_aktivitas';
 $route['front_liner/report_competitor'] = 'front_liner/Report_competitor';
 $route['front_liner/delete_report_competitor'] = 'front_liner/Delete_report_competitor';
 $route['front_liner/location'] = 'front_liner/Location';
