@@ -1413,7 +1413,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																</div>
 																Keterangan :
 																<ul>
-																	<li>Index "id_laporan" digunakan sebagai parameter untuk mengubah data lain.</li>
+																	<li>Index "id_report_competitor" digunakan sebagai parameter untuk mengubah data lain.</li>
 																	<li>Untuk atribut foto, persyaratan sama dengan method <b>POST</b></li>
 																</ul>
 															</div>
@@ -2223,6 +2223,115 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 												</div>
 												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse95" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/pic/report_kadaluarsa?id_user={id_user}</a>
+														</h4>
+													</div>
+													<div id="collapse95" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi ini menampilkan semua laporan barang yang kadaluarsa yang dibuat seorang PIC<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_report_kadaluarsa": "int",
+	"foto": "url foto",
+	"kode_produk": "string",
+	"nama_produk": "string",
+	"jumlah": "int",
+	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
+	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss",
+	"keterangan": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse94" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/pic/report_kadaluarsa</a>
+														</h4>
+													</div>
+													<div id="collapse94" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk menyimpan laporan barang yang kadaluarsa oleh seorang PIC<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_user": "int",
+	"foto": "base64",
+	"kode_produk": "string",
+	"jumlah": "int",
+	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
+	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss",
+	"keterangan": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Untuk foto berupa string <b>base64</b> dari sebuah foto, dan tipe data yang dibolehkan dari foto yang akan diupload adalah <b>.jpg</b></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse93" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/pic/report_kadaluarsa</a>
+														</h4>
+													</div>
+													<div id="collapse93" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk mengubah data laporan barang yang kadaluarsa oleh seorang PIC<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_report_kadaluarsa": "int",
+	"id_user": "int",
+	"foto": "base64",
+	"kode_produk": "string",
+	"jumlah": "int",
+	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
+	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss",
+	"keterangan": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Index "id_report_kadaluarsa" digunakan sebagai parameter untuk mengubah data lain.</li>
+																	<li>Untuk atribut foto, persyaratan sama dengan method <b>POST</b></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child-->
 												<!-- Start Child -->
 												<div class="panel panel-default">
 													<div class="panel-heading">

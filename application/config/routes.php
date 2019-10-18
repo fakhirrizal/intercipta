@@ -95,6 +95,7 @@ $route['pic/penjualan'] = 'pic/Selling';
 $route['pic/penjualan_hari_ini'] = 'pic/Selling_today';
 $route['pic/penjualan_bulan_ini'] = 'pic/Selling_this_month';
 $route['pic/project_region_to_outlet'] = 'pic/Project_region_to_outlet';
+$route['pic/report_kadaluarsa'] = 'pic/Report_kadaluarsa';
 
 /* Front Liner */
 $route['front_liner/absent'] = 'front_liner/Check_in';
