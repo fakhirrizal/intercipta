@@ -10,7 +10,7 @@ class Report extends REST_Controller {
 	function index_get() {
 		if($this->get('id_laporan')!=NULL){
 			// $q = "SELECT a.id AS id_laporan,a.tgl_laporan,b.nama_outlet,a.kode_produk,a.kondisi,a.jumlah,a.foto,a.keterangan,a.tgl_masuk,a.tgl_kadaluarsa FROM tb_lapor_fl a LEFT JOIN tb_outlet b ON a.id_outlet=b.id_outlet WHERE a.id='".$this->get('id_laporan')."'";
-			$q = "SELECT a.id AS id_laporan,a.tgl_laporan,a.id_outlet,b.nama_outlet,z.nama_produk,a.kode_produk,a.kondisi,a.jumlah,a.foto,a.keterangan,a.tgl_masuk,a.tgl_kadaluarsa FROM tb_lapor_fl a LEFT JOIN tb_outlet b ON a.id_outlet=b.id_outlet LEFT JOIN tb_produk z ON a.kode_produk=z.kode_produk WHERE a.id='".$this->get('id_laporan')."'";
+			$q = "SELECT a.id AS id_laporan,a.tgl_laporan,a.id_outlet,b.nama_outlet,z.nama_produk,a.kode_produk,a.kondisi,a.jumlah,a.foto,a.keterangan,a.tgl_masuk,a.tgl_kadaluarsa FROM tb_lapor_fl a LEFT JOIN tb_outlet b ON a.id_outlet=b.id_outlet LEFT JOIN tb_produk z ON a.kode_produk=z.kode_produk WHERE a.id='".$this->get('id_laporan')."' ORDER BY a.id DESC";
 			$get_data = $this->db->query($q)->result();
 			if($get_data==NULL){
 				echo "no_data";
@@ -19,7 +19,7 @@ class Report extends REST_Controller {
 			}
 		}elseif($this->get('nik_fl')!=NULL){
 			// $q = "SELECT a.id AS id_laporan,a.tgl_laporan,b.nama_outlet,a.kode_produk,a.kondisi,a.jumlah,a.foto,a.keterangan,a.tgl_masuk,a.tgl_kadaluarsa FROM tb_lapor_fl a LEFT JOIN tb_outlet b ON a.id_outlet=b.id_outlet WHERE a.nik_fl='".$this->get('nik_fl')."'";
-			$q = "SELECT a.id AS id_laporan,a.tgl_laporan,a.id_outlet,b.nama_outlet,z.nama_produk,a.kode_produk,a.kondisi,a.jumlah,a.foto,a.keterangan,a.tgl_masuk,a.tgl_kadaluarsa FROM tb_lapor_fl a LEFT JOIN tb_outlet b ON a.id_outlet=b.id_outlet LEFT JOIN tb_produk z ON a.kode_produk=z.kode_produk WHERE a.nik_fl='".$this->get('nik_fl')."'";
+			$q = "SELECT a.id AS id_laporan,a.tgl_laporan,a.id_outlet,b.nama_outlet,z.nama_produk,a.kode_produk,a.kondisi,a.jumlah,a.foto,a.keterangan,a.tgl_masuk,a.tgl_kadaluarsa FROM tb_lapor_fl a LEFT JOIN tb_outlet b ON a.id_outlet=b.id_outlet LEFT JOIN tb_produk z ON a.kode_produk=z.kode_produk WHERE a.nik_fl='".$this->get('nik_fl')."' ORDER BY a.id DESC";
 			$get_data = $this->db->query($q)->result();
 			if($get_data==NULL){
 				echo "no_data";

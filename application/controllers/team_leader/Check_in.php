@@ -31,10 +31,10 @@ class Check_in extends REST_Controller {
 				$actual_path = "/home/aplikasi/public_html/intercipta/".$upload_folder_path."/".$file_name;
 				$image = $this->post('image');
 				if (file_put_contents($actual_path, base64_decode($image)) != null) {
-					$q = "INSERT INTO tb_absensi(tgl_absensi, nik_user, jam_masuk, foto, lat, lng, id_outlet, telat) VALUES('".$this->post('tgl_absensi')."', '".$this->post('nik')."', '".$this->post('jam_masuk')."', '".$file_name."', '".$this->post('lat')."', '".$this->post('lng')."','".$this->post('id_outlet')."', '".$this->post('telat')."')";
+					$q = "INSERT INTO tb_absensi(tgl_absensi, nik_user, jam_masuk, foto, lat, lng, id_outlet, telat, keterangan_absen) VALUES('".$this->post('tgl_absensi')."', '".$this->post('nik')."', '".$this->post('jam_masuk')."', '".$file_name."', '".$this->post('lat')."', '".$this->post('lng')."','".$this->post('id_outlet')."', '".$this->post('telat')."', '".$this->post('keterangan_absen')."')";
 					$insert_to_table = $this->db->query($q);
 					if($insert_to_table=='1'){
-						$q2 = "UPDATE tb_user SET status_absen = 'masuk', absen_today = 'ya' WHERE nik = '".$this->post('nik')."'";
+						$q2 = "UPDATE tb_user SET status_absen = 'masuk', absen_today = 'ya', keterangan_absen = '".$this->post('keterangan_absen')."' WHERE nik = '".$this->post('nik')."'";
 						$update_absent = $this->db->query($q2);
 						if($update_absent=='1'){
 							$q3 = "SELECT id FROM tb_absensi WHERE tgl_absensi = '".$this->post('tgl_absensi')."'";

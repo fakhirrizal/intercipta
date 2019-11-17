@@ -54,6 +54,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 
 $route['auth/login'] = 'auth/Login';
+$route['auth/absent'] = 'auth/Absent';
+$route['auth/reset_absent'] = 'auth/Reset_absent';
 $route['auth/register'] = 'auth/Register';
 $route['auth/username_check'] = 'auth/Username_check';
 $route['auth/change_password'] = 'auth/Change_password';
@@ -65,6 +67,8 @@ $route['admin/status_login'] = 'admin/Status_login';
 $route['admin/outlet'] = 'admin/Outlet';
 $route['admin/delete_outlet'] = 'admin/Delete_outlet';
 $route['admin/region'] = 'admin/Region';
+$route['admin/product'] = 'admin/Product';
+$route['admin/delete_product'] = 'admin/Delete_product';
 $route['admin/delete_region'] = 'admin/Delete_region';
 $route['admin/shift'] = 'admin/Shift';
 $route['admin/delete_shift'] = 'admin/Delete_shift';
@@ -104,9 +108,13 @@ $route['front_liner/status_absen'] = 'front_liner/Absent_status';
 $route['front_liner/report'] = 'front_liner/Report';
 $route['front_liner/delete_report'] = 'front_liner/Delete_report';
 
+$route['front_liner/project'] = 'front_liner/Project';
+$route['front_liner/product'] = 'front_liner/Product';
+
 $route['front_liner/report_penjualan'] = 'front_liner/Report_penjualan';
 $route['front_liner/report_aktivitas'] = 'front_liner/Report_aktivitas';
 $route['front_liner/report_competitor'] = 'front_liner/Report_competitor';
+$route['front_liner/report_kadaluarsa'] = 'front_liner/Report_kadaluarsa';
 $route['front_liner/delete_report_competitor'] = 'front_liner/Delete_report_competitor';
 $route['front_liner/location'] = 'front_liner/Location';
 

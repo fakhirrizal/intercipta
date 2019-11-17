@@ -28,22 +28,22 @@ License: You must have a valid license purchased only from themeforest(the above
         <meta content="" name="author" />
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="https://sitri.online/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="https://sitri.online/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="https://sitri.online/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="https://sitri.online/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://datum.aplikasiku.online/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://datum.aplikasiku.online/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://datum.aplikasiku.online/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://datum.aplikasiku.online/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN THEME GLOBAL STYLES -->
-        <link href="https://sitri.online/assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
-        <link href="https://sitri.online/assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
-        <link href="https://sitri.online/assets/pages/css/blog.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://datum.aplikasiku.online/assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="http://datum.aplikasiku.online/assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://datum.aplikasiku.online/assets/pages/css/blog.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
-        <link href="https://sitri.online/assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
-        <link href="https://sitri.online/assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
-        <link href="https://sitri.online/assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://datum.aplikasiku.online/assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://datum.aplikasiku.online/assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="http://datum.aplikasiku.online/assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="https://sitri.online/assets/icon.png" /> </head>
+        <link rel="shortcut icon" href="http://datum.aplikasiku.online/assets/icon.png" /> </head>
     <!-- END HEAD -->
 
         <body class="page-container-bg-solid page-md">
@@ -124,12 +124,84 @@ License: You must have a valid license purchased only from themeforest(the above
 	"level": "admin/ pic/ tl/ fl/ client/ non_fl/ payroll",
 	"status_absen": "masuk/ keluar",
 	"absen_today": "ya/ tidak",
+	"keterangan_absen": "ok/ izin/ sakit",
 	"id_shift": "int",
 	"id_project_region": "int"
 }</code>
 																		</pre>
 																	</div>
 																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse106" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/auth/absent?id_user={id_user}</a>
+														</h4>
+													</div>
+													<div id="collapse106" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id": "int",
+	"tgl_absensi": "YYYY-mm-dd HH:ii:ss",
+	"nik_user": "string",
+	"jam_masuk": "HH:ii:ss",
+	"jam_keluar": "HH:ii:ss",
+	"foto": "url foto",
+	"lat": "string",
+	"lng": "string",
+	"id_outlet": "int",
+	"telat": "ya/ tidak",
+	"absen_today": "ya/ tidak",
+	"status_absen": "masuk/ keluar"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse107" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/auth/reset_absent</a>
+														</h4>
+													</div>
+													<div id="collapse107" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi ini untuk me-reset data informasi absen dari seorang user<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_user": "int"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
 															</div>
 														</div>
 													</div>
@@ -312,6 +384,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	"level": "admin/ pic/ tl/ fl/ client/ non_fl/ payroll",
 	"status_absen": "masuk/ keluar",
 	"absen_today": "ya/ tidak",
+	"keterangan_absen": "ok/ izin/ sakit",
 	"id_shift": "int",
 	"id_region": "int",
 	"created_at": "Y-m-d H:i:s",
@@ -355,6 +428,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	"level": "admin/ pic/ tl/ fl/ client/ non_fl/ payroll",
 	"status_absen": "masuk/ keluar",
 	"absen_today": "ya/ tidak",
+	"keterangan_absen": "ok/ izin/ sakit",
 	"nama_shift": "string",
 	"nama_region": "string",
 	"created_at": "Y-m-d H:i:s",
@@ -471,6 +545,171 @@ License: You must have a valid license purchased only from themeforest(the above
 																Keterangan :
 																<ul>
 																	<li>Index "id_user" digunakan sebagai parameter untuk mengubah data lain.</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child-->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse99" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/product</a>
+														</h4>
+													</div>
+													<div id="collapse99" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk melihat semua data produk<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_produk": "int",
+	"kode_produk": "string",
+	"nama_produk": "string",
+	"foto": "url foto",
+	"id_client": "int",
+	"nama_client": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse100" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/admin/product?id_produk={id_produk}</a>
+														</h4>
+													</div>
+													<div id="collapse100" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk melihat suatu barang yang dikehendaki<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_produk": "int",
+	"kode_produk": "string",
+	"nama_produk": "string",
+	"foto": "url foto",
+	"id_client": "int",
+	"nama_client": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse101" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/admin/product</a>
+														</h4>
+													</div>
+													<div id="collapse101" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk menyimpan data produk<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"kode_produk": "string",
+	"nama_produk": "string",
+	"foto": "base64",
+	"id_client": "int"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Untuk foto berupa string <b>base64</b> dari sebuah foto, dan tipe data yang dibolehkan dari foto yang akan diupload adalah <b>.jpg</b></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse103" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/admin/product</a>
+														</h4>
+													</div>
+													<div id="collapse103" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk mengubah data suatu produk<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_produk": "int",
+	"kode_produk": "string",
+	"nama_produk": "string",
+	"foto": "base64",
+	"id_client": "int"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Index "id_produk" digunakan sebagai parameter untuk mengubah data lain.</li>
+																	<li>Untuk atribut foto, persyaratan sama dengan method <b>POST</b></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child-->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse102" aria-expanded="false" class="collapsed"><span class="label label-danger">GET</span>&nbsp;{url}/index.php/admin/delete_product?id_produk={$id_produk}</a>
+														</h4>
+													</div>
+													<div id="collapse102" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Berfungsi untuk menghapus data produk
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<!-- <pre>
+																			<code>{
+	"id": "int"
+}</code>
+																		</pre> -->
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Output hanya ada 2 yaitu '<b>success</b>' dan '<b>failed</b>'</li>
 																</ul>
 															</div>
 														</div>
@@ -1214,6 +1453,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	"nik": "string",
 	"nama": "string",
 	"tgl_absensi": "YYYY-mm-dd HH:ii:ss",
+	"keterangan_absen": "ok/ izin/ sakit",
 	"image": "base64",
 	"lat": "string",
 	"lng": "string",
@@ -1275,7 +1515,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<pre>
 																			<code>{
 	"status_absen": "masuk/ keluar",
-	"absen_today": "ya/ tidak"
+	"absen_today": "ya/ tidak",
+	"keterangan_absen": "ok/ izin/ sakit",
 }</code>
 																		</pre>
 																	</div>
@@ -2403,6 +2644,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	"nik": "string",
 	"nama": "string",
 	"tgl_absensi": "YYYY-mm-dd HH:ii:ss",
+	"keterangan_absen": "ok/ izin/ sakit",
 	"image": "base64",
 	"lat": "string",
 	"lng": "string"
@@ -2463,7 +2705,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<pre>
 																			<code>{
 	"status_absen": "masuk/ keluar",
-	"absen_today": "ya/ tidak"
+	"absen_today": "ya/ tidak",
+	"keterangan_absen": "ok/ izin/ sakit",
 }</code>
 																		</pre>
 																	</div>
@@ -2496,6 +2739,76 @@ License: You must have a valid license purchased only from themeforest(the above
 	"nama": "string",
 	"lat": "string",
 	"lng": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse105" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/product?id_client={id_client}</a>
+														</h4>
+													</div>
+													<div id="collapse105" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk melihat suatu barang dari client tertentu<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_produk": "int",
+	"kode_produk": "string",
+	"nama_produk": "string",
+	"foto": "url foto",
+	"id_client": "int",
+	"nama_client": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse104" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/project?id_fl={id_fl}</a>
+														</h4>
+													</div>
+													<div id="collapse104" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk melihat data project dari seorang FL<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_tl": "int",
+	"nama_tl": "string",
+	"kode_project": "string",
+	"nama_project": "string",
+	"id_client": "int",
+	"nama_client": "string"
 }</code>
 																		</pre>
 																	</div>
@@ -2977,6 +3290,115 @@ License: You must have a valid license purchased only from themeforest(the above
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse98" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/report_kadaluarsa?id_user={id_user}</a>
+														</h4>
+													</div>
+													<div id="collapse98" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi ini menampilkan semua laporan barang yang kadaluarsa yang dibuat seorang FL<br>Output datanya sebagai berikut,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_report_kadaluarsa": "int",
+	"foto": "url foto",
+	"kode_produk": "string",
+	"nama_produk": "string",
+	"jumlah": "int",
+	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
+	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss",
+	"keterangan": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																<!-- Keterangan :
+																<ul>
+																	<li>Kode kelompok dan Keterangan, jika user merupakan super admin/ hsse/ cdo maka field tadi tidak akan muncul </li>
+																	<li>Kode kelompok, diambil dari tabel kelompok</li>
+																</ul> -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse97" aria-expanded="false" class="collapsed"><span class="label label-info">POST</span>&nbsp;{url}/index.php/front_liner/report_kadaluarsa</a>
+														</h4>
+													</div>
+													<div id="collapse97" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk menyimpan laporan barang yang kadaluarsa oleh seorang FL<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_user": "int",
+	"foto": "base64",
+	"kode_produk": "string",
+	"jumlah": "int",
+	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
+	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss",
+	"keterangan": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Untuk foto berupa string <b>base64</b> dari sebuah foto, dan tipe data yang dibolehkan dari foto yang akan diupload adalah <b>.jpg</b></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child -->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion" href="#collapse96" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/index.php/front_liner/report_kadaluarsa</a>
+														</h4>
+													</div>
+													<div id="collapse96" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+														<div class="panel-body">
+															Fungsi untuk mengubah data laporan barang yang kadaluarsa oleh seorang FL<br>Berikut beberapa atribut yang harus diisi,
+															<div class="signature-container">
+																<div class="snippet" style="display: block;">
+																	<div class="snippet_json" style="display: block;">
+																		<pre>
+																			<code>{
+	"id_report_kadaluarsa": "int",
+	"id_user": "int",
+	"foto": "base64",
+	"kode_produk": "string",
+	"jumlah": "int",
+	"tgl_masuk": "YYYY-mm-dd HH:ii:ss",
+	"tgl_kadaluarsa": "YYYY-mm-dd HH:ii:ss",
+	"keterangan": "string"
+}</code>
+																		</pre>
+																	</div>
+																</div>
+																Keterangan :
+																<ul>
+																	<li>Index "id_report_kadaluarsa" digunakan sebagai parameter untuk mengubah data lain.</li>
+																	<li>Untuk atribut foto, persyaratan sama dengan method <b>POST</b></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End Child-->
+												<!-- Start Child -->
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
 															<a data-toggle="collapse" data-parent="#accordion" href="#collapse92" aria-expanded="false" class="collapsed"><span class="label label-success">GET</span>&nbsp;{url}/index.php/front_liner/report_aktivitas?id_user={id_user}</a>
 														</h4>
 													</div>
@@ -3025,8 +3447,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																			<code>{
 	"id_user": "int",
 	"foto_outlet": "base64",
-	"keterangan": "string",
-	"tgl": "YYYY-mm-dd HH:ii:ss"
+	"keterangan": "string"
 }</code>
 																		</pre>
 																	</div>
@@ -3059,8 +3480,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	"id_laporan": "int",
 	"id_user": "int",
 	"foto_outlet": "base64",
-	"keterangan": "string",
-	"tgl": "YYYY-mm-dd HH:ii:ss"
+	"keterangan": "string"
 }</code>
 																		</pre>
 																	</div>
@@ -3103,7 +3523,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														</div>
 													</div>
 												</div>
-												<!-- End Parent and Child-->
+												<!-- End Parent and Child -->
 												<!-- Start Parent -->
 												<div class="heading">
 													<h4>
@@ -3128,6 +3548,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	"nik": "string",
 	"nama": "string",
 	"tgl_absensi": "YYYY-mm-dd HH:ii:ss",
+	"keterangan_absen": "ok/ izin/ sakit",
 	"image": "base64",
 	"lat": "string",
 	"lng": "string"
@@ -3370,21 +3791,21 @@ License: You must have a valid license purchased only from themeforest(the above
 		<img src='http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-5/256/navigate-up-icon.png' width='20%' />
         </div>
         <!-- END FOOTER -->
-        <script src="https://sitri.online/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-        <script src="https://sitri.online/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="https://sitri.online/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
-        <script src="https://sitri.online/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
-        <script src="https://sitri.online/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-        <script src="https://sitri.online/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-        <script src="https://sitri.online/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
-		<script src="https://sitri.online/assets/global/scripts/app.min.js" type="text/javascript"></script>
+		<script src="http://datum.aplikasiku.online/assets/global/scripts/app.min.js" type="text/javascript"></script>
 		<!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
-        <script src="https://sitri.online/assets/layouts/layout3/scripts/layout.min.js" type="text/javascript"></script>
-        <script src="https://sitri.online/assets/layouts/layout3/scripts/demo.min.js" type="text/javascript"></script>
-        <script src="https://sitri.online/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/layouts/layout3/scripts/layout.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/layouts/layout3/scripts/demo.min.js" type="text/javascript"></script>
+        <script src="http://datum.aplikasiku.online/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
     </body>
 

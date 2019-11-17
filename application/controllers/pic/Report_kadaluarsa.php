@@ -9,7 +9,7 @@ class Report_kadaluarsa extends REST_Controller {
 	}
 	function index_get() {
 		if($this->get('id_user')!=NULL){
-			$q = "SELECT a.id_report_kadaluarsa,a.foto,a.kode_produk,p.nama_produk,a.jumlah,a.tgl_masuk,a.tgl_kadaluarsa,a.keterangan FROM tb_report_kadaluarsa a LEFT JOIN tb_produk p ON a.kode_produk=p.kode_produk WHERE a.id_user='".$this->get('id_user')."'";
+			$q = "SELECT a.id_report_kadaluarsa,a.foto,a.kode_produk,p.nama_produk,a.jumlah,a.tgl_masuk,a.tgl_kadaluarsa,a.keterangan FROM tb_report_kadaluarsa a LEFT JOIN tb_produk p ON a.kode_produk=p.kode_produk WHERE a.id_user='".$this->get('id_user')."' ORDER BY a.id_report_kadaluarsa DESC";
 			$get_data = $this->db->query($q)->result();
 			if($get_data==NULL){
 				echo "no_data";
@@ -17,7 +17,7 @@ class Report_kadaluarsa extends REST_Controller {
 				$this->response($get_data, 200);
 			}
 		}elseif($this->get('id_report_kadaluarsa')!=NULL){
-			$q = "SELECT a.id_report_kadaluarsa,a.foto,a.kode_produk,p.nama_produk,a.jumlah,a.tgl_masuk,a.tgl_kadaluarsa,a.keterangan FROM tb_report_kadaluarsa a LEFT JOIN tb_produk p ON a.kode_produk=p.kode_produk WHERE a.id_report_kadaluarsa='".$this->get('id_report_kadaluarsa')."'";
+			$q = "SELECT a.id_report_kadaluarsa,a.foto,a.kode_produk,p.nama_produk,a.jumlah,a.tgl_masuk,a.tgl_kadaluarsa,a.keterangan FROM tb_report_kadaluarsa a LEFT JOIN tb_produk p ON a.kode_produk=p.kode_produk WHERE a.id_report_kadaluarsa='".$this->get('id_report_kadaluarsa')."' ORDER BY a.id_report_kadaluarsa DESC";
 			$get_data = $this->db->query($q)->result();
 			if($get_data==NULL){
 				echo "no_data";

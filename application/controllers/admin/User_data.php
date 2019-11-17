@@ -18,7 +18,7 @@ class User_data extends REST_Controller {
 				$this->response($get_data, 200);
 			}
 		}else{
-			$q = "SELECT a.id_user,a.nik,a.nama,a.alamat,a.email,a.password,a.nohp,a.level,a.status_absen,a.absen_today,b.nama_shift,c.nama_region,a.created_at,a.updated_at FROM tb_user a LEFT JOIN tb_shift b ON a.id_shift=b.id LEFT JOIN tb_region c ON a.id_region=c.id WHERE a.level = '".$this->get('level')."'";
+			$q = "SELECT a.id_user,a.nik,a.nama,a.alamat,a.email,a.password,a.nohp,a.level,a.status_absen,a.absen_today,a.keterangan_absen,b.nama_shift,c.nama_region,a.created_at,a.updated_at FROM tb_user a LEFT JOIN tb_shift b ON a.id_shift=b.id LEFT JOIN tb_region c ON a.id_region=c.id WHERE a.level = '".$this->get('level')."'";
 			$get_data = $this->db->query($q)->result();
 			if($get_data==NULL){
 				// $this->response(array('status' => 'Result not found', 502));

@@ -81,6 +81,11 @@ class Fl_to_outlet extends REST_Controller {
 			if($check==NULL){
 				$q = "INSERT INTO tb_fl_to_outlet(id_project_region_to_outlet, id_fl, id_shift) VALUES('".$getid->id_project_region_to_outlet."','".$this->post('id_user')."','".$this->post('id_shift')."')";
 				$insert_to_table = $this->db->query($q);
+				$data_update_outlet = array(
+					'id_outlet'       => $this->post('id_outlet')
+				);
+				$this->db->where('id_user', $this->post('id_user'));
+				$update_outlet = $this->db->update('tb_user', $data_update_outlet);
 				if($insert_to_table=='1'){
 					// $this->response(array('status' => 'Success', 200));
 					// $this->response(array('status' => '1', 200));

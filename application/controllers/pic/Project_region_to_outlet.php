@@ -87,7 +87,8 @@ class Project_region_to_outlet extends REST_Controller {
 	function index_get() {
         $where = array(
 					'id_project_region_to_outlet'       => $this->get('id_project_region_to_outlet'));
-        $delete = $this->db->delete('tb_project_region_to_outlet', $where);
+		$delete = $this->db->delete('tb_project_region_to_outlet', $where);
+		$delete2 = $this->db->delete('tb_fl_to_outlet', $where);
         if ($delete) {
 			// $this->response(array('status' => 'Update is successful', 200));
 			// $this->response(array('status' => '1', 200));

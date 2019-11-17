@@ -57,10 +57,10 @@ class Check_in extends REST_Controller {
                         $diff  = $akhir - $awal;
                         
                         if($diff<=3600){
-                            $q2 = "INSERT INTO tb_absensi(tgl_absensi, nik_user, jam_masuk, foto, lat, lng, telat) VALUES('".$this->post('tgl_absensi')."', '".$this->post('nik')."', '".$jam_masuk."', '".$file_name."', '".$this->post('lat')."', '".$this->post('lng')."', '".$telat."')";
+                            $q2 = "INSERT INTO tb_absensi(tgl_absensi, nik_user, jam_masuk, foto, lat, lng, telat, keterangan_absen) VALUES('".$this->post('tgl_absensi')."', '".$this->post('nik')."', '".$jam_masuk."', '".$file_name."', '".$this->post('lat')."', '".$this->post('lng')."', '".$telat."', '".$this->post('keterangan_absen')."')";
             				$insert_to_table = $this->db->query($q2);
             				if($insert_to_table=='1'){
-            					$q3 = "UPDATE tb_user SET status_absen = 'masuk', absen_today = 'ya' WHERE nik = '".$this->post('nik')."'";
+            					$q3 = "UPDATE tb_user SET status_absen = 'masuk', absen_today = 'ya', keterangan_absen = '".$this->post('keterangan_absen')."' WHERE nik = '".$this->post('nik')."'";
             					$update_absent = $this->db->query($q3);
             					if($update_absent=='1'){
             						$q4 = "SELECT id FROM tb_absensi WHERE tgl_absensi = '".$this->post('tgl_absensi')."'";
